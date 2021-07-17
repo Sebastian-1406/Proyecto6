@@ -1,0 +1,323 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'DM Serif Display', serif;
+    font-family: 'Karla', sans-serif;
+
+}
+
+:root{
+    --morado : hsl(256, 26%, 20%);
+    --azul :  hsl(216, 30%, 68%);
+    --negro : hsl(270, 9%, 17%);
+    --plomo : hsl(273, 4%, 51%);
+    --blanco : hsl(0, 0%, 98%);
+
+}
+
+
+/* ocultos */
+.nav__mobile{
+    display: none;
+    background: hsl(270, 9%, 17%);
+    width: 100%;
+    height: 100vh;
+    padding: 30px 20px;
+    position: absolute;
+    background-image: url("../images/bg-pattern-mobile-nav.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    left: 0;
+    top: 70px;
+}
+.active .nav__mobile{
+    display: block;
+}
+.active  .header__texto{
+    display: none;
+}
+.active .pattern{
+    display: none;
+}
+
+.active  .main{
+    display: none;
+}
+.active .footer{
+    display: none;
+}
+.nav__mobile ul{
+    list-style: none;
+}
+.nav__mobile li{
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+}
+.nav__mobile a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.header{
+    position: relative;
+}
+.header__imagen-desktop{
+    display: none;
+}
+
+
+
+.header__imagen-mobile{
+    vertical-align: middle;
+    width: 100%;
+}
+.nav{
+    padding: 20px;
+}
+.nav__imagen-hamburguesa{
+    cursor: pointer;
+}
+.nav__imagen-logo{
+    width: 100px;
+    height: 15px;
+
+}
+.nav__contenedor{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.header__texto{
+    background: hsl(256, 26%, 20%);
+    padding: 70px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    background-image: url("../images/bg-pattern-intro-left-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+.header__titulo{
+    text-align: center;
+    color: rgb(253,251,252);
+}
+.header__parrafo{
+    text-align: center;
+    color: rgb(253,251,252);
+}
+/* .link{
+    border: 2px solid rgb(211,208,215);
+    padding: 7px 25px;
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(216,213,219);
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+
+} */
+.pattern{
+    position: absolute;
+    bottom: -20%;
+    right: 0px;
+    z-index: 100;
+}
+.main{
+    padding: 100px 20px;
+}
+.seccion{
+    padding: 50px 20px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.linea{
+    width: 150px;
+    height: 1.5px;
+    background: red;
+    display: inline-block;
+}
+.seccion__texto{
+    text-align: center;
+
+}
+.seccion__texto-titulo{
+    font-size: 40px;
+    margin: 30px 0;
+    color: rgb(43,42,47);
+    font-family: 'DM Serif Display', serif;
+    font-weight: 600;
+}
+
+.seccion__contenido{
+    text-align: center;
+}
+.seccion__titulo{
+    margin: 10px 0;
+    color:rgb(43,42,47);
+    font-family: 'DM Serif Display', serif;
+    font-weight: 500;
+}
+.seccion__parrafo{
+    margin: 10px 0;
+    color: rgb(145,143,145);
+    font-size: 14px;
+}
+
+.seccion__tarjeta{
+    display: flex;
+    flex-direction: column;
+    background: hsl(256, 26%, 20%);
+    padding: 50px 30px;
+    text-align: center;
+    background-image: url("../images/bg-pattern-how-we-work-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: right top ;
+
+}
+.seccion__tarjeta-titulo{
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: rgb(253,251,252);
+    font-family: 'DM Serif Display', serif;
+    font-weight: 500;
+
+}
+
+.footer{
+    padding: 65px 20px;
+    background-image: url("../images/bg-pattern-footer-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background: rgb(250,250,250);
+}
+.footer__contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 30px 0;
+    border-bottom: 1px solid;
+}
+.footer__redes{
+    display: inline-flex;
+    gap: 15px;
+}
+.footer__link{
+    text-align: center;
+}
+.footer__link-contenido{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer__lista{
+    list-style: none;
+}
+.footer__lista li{
+    padding: 3px 0;
+    color: rgb(86,84,100);
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.footer__titulo{
+    margin: 15px 0;
+    color: rgb(185,184,189);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+}
+.nav__desktop{
+    display: none;
+}
+
+
+@media screen and (min-width:700px){
+    .nav__contenedor{
+        display: none;
+    }
+    .nav__imagen-hamburguesa{
+        display: none;
+    }
+    .nav__mobile{
+        display: none;
+    }
+    .nav{
+        padding: 15px 90px;
+        
+    }
+    .nav__desktop{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav__desktop-logo{
+        width: 100px;
+        height: 15px;
+    }
+    .link{
+        padding: 0 15px;
+        text-decoration: none;
+        font-size: 13px;
+        text-transform: uppercase;
+        display: inline-block;
+        text-decoration: none;
+        font-weight: 600;
+        color: hsl(273, 4%, 51%);
+    }
+    .link__modificado{
+        color: #000;
+        border: 2px solid #000;
+        padding: 8px 20px;
+    }
+
+
+    .header__imagen-mobile{
+        display: none;
+    }
+    .contenedor__texto{
+        display: none
+    }
+    .contenedor__texto-desktop{
+        background: hsl(256, 26%, 20%);
+        padding: 80px;
+        position: relative;
+        display: flex;
+    }
+    .header__texto{
+        border: 1px solid rgb(85, 53, 53);
+        width: 50%;
+        padding: 0;
+        align-items: flex-start;
+    }
+    .header__imagen-desktop{
+        display: block;
+        width: 400px;
+        height: 430px;
+        position: absolute;
+        right: 80px;
+    }
+    .header__titulo{
+        font-family: 'DM Serif Display', serif;
+        font-size: 40px;
+        margin: 0;  
+        font-weight: 500;
+    }
+
+    .header__parrafo{
+        text-align: left;
+        font-size: 13px;
+    }
+}
