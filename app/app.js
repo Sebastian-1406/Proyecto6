@@ -3,11 +3,18 @@ let body = document.querySelector("body")
 
 boton.addEventListener("click", () => {
 
-    body.classList.toggle("active")
+    let respuesta =  body.classList.toggle("active")
 
-    if (className = "active") {
+    if(respuesta){
+        document.querySelector(".fas").classList.replace("fa-hamburger", "fa-times")
+    }else {
+        document.querySelector(".fas").classList.replace("fa-times", "fa-hamburger")
         
-        document.querySelector(".fa-hamburger").classList.replace("fa-hamburger", "fa-times")
     }
+
+
+
+
+
 
 })
